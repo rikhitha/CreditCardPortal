@@ -1,0 +1,53 @@
+<br>
+<br>
+<div class="page">
+
+ 
+   
+    <label class="field field_v3">
+      <input class="field__input" placeholder="ENTER PAN NUMBER">
+      <span class="field__label-wrap">
+        <span class="field__label">PAN NUMBER</span>
+      </span>
+    </label>
+  </div>
+  
+<br>
+<br>
+<div class="page">
+    <button class="field__input" value="SEARCH" (click)="alldet()"></button>
+</div>
+
+
+<br>
+<br>
+
+  <table class="container">
+	<thead>
+		<tr>
+			<th><h1>FirstName</h1></th>
+			<th><h1>LastName</h1></th>
+            <th><h1>ContactNumber</h1></th>
+            <th><h1>CreditcardType</h1></th>
+            <th><h1>CreditcardNumber</h1></th>
+			<th><h1>CardholderName</h1></th>
+            <th><h1>ExpiryDate</h1></th>
+            <th><h1>Cvv</h1></th>
+            <th><h1>CardLimit</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr *ngFor="let score of Ccdetails">
+            <td>{{score.fname}}</td>
+            <td>{{score.lname}}</td>
+            <td>{{score.contact_no}}</td>
+            <td>{{score.card_type}}</td>
+            <td>{{score.cardholder_name}}</td>
+            <td>{{score.expiry_date}}</td>
+            <td>{{score.cvv}}</td>
+            <td>{{score.card_limit}}</td>
+
+        </tr>
+   
+	</tbody>
+</table>

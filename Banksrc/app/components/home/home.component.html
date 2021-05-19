@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+ 
+ <div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a routerLink="/home" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a routerLink="/login" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGIN</a>
+    <img src="data:image/png;base64,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" class="w3-round" alt="Random Name" style="width:5%">
+    
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+ 
+ <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;900&display=swap" rel="stylesheet" />
+
+ <div id="topbar">
+   <p id="logo">LAVA</p>
+   <div>
+     <a class="menu-item" href="#landing-section">HOME</a>
+     <a class="menu-item" href="#second-section">Login</a>
+     <a class="menu-item" [routerLink]="['/login']">TESTIMONIALS</a>
+     <a class="menu-item" href="#">CONTACT US</a>
+   </div>
+ </div>  -->
+ 
+ <div id="landing-section">
+   <h1 id="main-heading">
+     METROPOLIS <br /><span id="txt-create"></span>
+   </h1>
+   <p id="para">
+     
+  <a class="hyperlink" href="#"></a> <a class="hyperlink" href="#"></a> One Credit Card for all your needs! <br />
+    <br /> 
+   </p>
+   <button class="btn-primary">CREDIT APPROVAL</button>
+ </div>
+ 
+ <div id="second-section">
+   <div id="feature-card-grid">
+   <div class="feature-card">
+     <img src="https://lava-homepage.firebaseapp.com/assets/images/features-icon-1.png" alt="Trend Analysis" />
+     <h3 class="feature-card-heading">Market Analysis</h3>
+     <p class="feature-card-desc">A market analysis is a quantitative and qualitative assessment of a market. It examines the market size, various market segments, customer buying patterns, the competition, and the economic environment.
+    </p>
+     <button class="btn-primary feature-card-btn">Read More</button>
+   </div>
+   <div class="feature-card">
+     <img src="https://lava-homepage.firebaseapp.com/assets/images/features-icon-2.png" alt="Site Optimization" />
+     <h3 class="feature-card-heading">Credit Cards</h3>
+     <p class="feature-card-desc">Credit cards are an essential financial tool that enables its holders to make purchases and have the luxury of paying back the amount later. A credit card comes with a bank-approved credit limit, and the holder must pay back the amount due on the due date, which is mutually decided by the bank and the holder.
+    </p>
+     <button class="btn-primary feature-card-btn">DISCOVER MORE</button>
+   </div>
+   <div class="feature-card">
+     <img src="https://lava-homepage.firebaseapp.com/assets/images/features-icon-3.png" alt="Trend Analysis" />
+     <h3 class="feature-card-heading">Payment Solutions</h3>
+     <p class="feature-card-desc"> Mpay offers a one-stop solution for banks to serve the unbanked population effectively, using a preconfigured, pre-integrated banking platform that is ready to be deployed.
+      Last Mile Service
+      Assisted banking functionality to enable last mile availability of service  
+      24×7 Availability
+      Customer transactions round-the-clock with zero interruption
+      
+      </p>
+     <button class="btn-primary feature-card-btn">MORE DETAIL</button>
+   </div>
+   </div>
+ </div> 

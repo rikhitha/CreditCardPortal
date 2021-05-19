@@ -1,0 +1,134 @@
+<html>
+  <head>
+ 
+  </head>
+<router-outlet>
+  <body>
+    <div class="area"></div>
+    <nav class="main-menu">
+            <ul>
+                <li>
+                    <a routerLink="/customerdashboard">
+                        <i class="fa fa-user"></i>
+                        <span class="nav-text">
+                            WELCOME {{username}}
+                        </span>
+                    </a>
+                  
+                </li>
+                <li>
+                    <a routerLink="/customerdashboard">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Dashboard
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a routerLink="/creditcard">
+                        <i class="fa fa-credit-card"></i>
+                        <span class="nav-text">
+                            CREDIT CARDS
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a routerLink="/applycreditcard">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                            APPLY CREDIT CARD
+                        </span>
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a routerLink="/checkstatus">
+                        <i class="fa fa-check"></i>
+                        <span class="nav-text">
+                            CHECK APPLICATION STATUS
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-pencil-square-o"></i>
+                        <span class="nav-text">
+                           UPDATE DETAILS
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a routerLink="/aboutus">
+                       <i class="fa fa-info-circle"></i>
+                        <span class="nav-text">
+                            ABOUT
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a routerLink="/home">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+        <div class="section full-height">
+            <input class="modal-btn" type="checkbox" id="modal-btn" name="modal-btn"/>
+            <label for="modal-btn">Credit Card Eligibility <i class="uil uil-expand-arrows"></i></label> 		
+            <div class="modal">		
+                <div class="modal-wrap">		
+                  <table border="1">
+                    
+                    <caption>METROPOLIS CREDIT CARD ELIGIBILITY</caption>
+                    <tr>
+                       <td><b>Eligibility Criteria</b></td>
+                       <td><b>Details</b></td>
+                    </tr>
+                    <tr>
+                        <td>Minimum Age</td>
+                        <td>18 years</td>
+                     </tr>
+                     <tr>
+                        <td>Maximum Age</td>
+                        <td>60 years</td>
+                     </tr>
+                     <tr>
+                        <td>Minimum Income Required</td>
+                        <td>Rs. 20,000* onwards</td>
+                     </tr>
+                     <tr>
+                        <td>Occupation</td>
+                        <td>Available for both Salaried and Self-Employed</td>
+                     </tr>
+                     <tr>
+                        <td>Other Criteria</td>
+                        <td>Should have a regular source of income
+                            Should have a good credit score</td>
+                     </tr>
+                     <tr>
+                        <td>Serviceable Cities</td>
+                        <td><a href="javascript:void(0)" 
+                            style="cursor:pointer"
+                            (click)="downloadPdf('./assets/sample.pdf','Metropolis_servicable_cities')">
+                            Download </a> to see Serviceable Cities</td>
+                     </tr>
+                    
+                    </table>	          		
+                </div>			          		
+            </div>	
+    
+          
+      </div>
+  </body>
+  </router-outlet>
+    </html>

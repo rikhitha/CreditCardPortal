@@ -1,0 +1,43 @@
+<br>
+<br>
+<div class="page">
+
+ 
+   
+    <label class="field field_v3">
+      <input class="field__input" placeholder="ENTER PAN NUMBER">
+      <span class="field__label-wrap">
+        <span class="field__label">PAN NUMBER</span>
+      </span>
+    </label>
+  </div>
+  
+<br>
+<br>
+<div class="page">
+    <button class="field__input" value="SEARCH" (click)="allscore()"></button>
+</div>
+
+
+<br>
+<br>
+
+  <table class="container">
+	<thead>
+		<tr>
+			<th><h1>ID</h1></th>
+			<th><h1>Customer Name</h1></th>
+			<th><h1>Pan Number</h1></th>
+			<th><h1>Cibil Score</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr *ngFor="let score of cibilscore">
+            <td>{{score.Id}}</td>
+            <td>{{score.Customer_name}}</td>
+            <td>{{score.Pan_number}}</td>
+            <td>{{score.Cibil_score}}</td>
+        </tr>
+   
+	</tbody>
+</table>

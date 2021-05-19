@@ -1,0 +1,131 @@
+
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>APPLY  FOR CREDIT CARD</h3>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit(firstname.value,lastname.value,age.value,gender.value,maritalstatus.value,dependents.value,email.value,country.value,city.value,mobilenumber.value,pannumber.value,aadharnumber.value,income.value,cardtype.value)">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" #firstname/>
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" #lastname />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="text" formControlName="age" class="form-control" placeholder="enter age"  [ngClass]="{ 'is-invalid': submitted && f.age.errors }" #age />
+                        <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
+                            <div *ngIf="f.age.errors.required">AGE is required</div>
+                            <div *ngIf="f.age.errors.age">AGE should be above 18</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <input type="text" formControlName="gender" class="form-control" placeholder="enter gender"  [ngClass]="{ 'is-invalid': submitted && f.gender.errors }" #gender />
+                        <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                            <div *ngIf="f.gender.errors.required">GENDER is required</div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>MaritalStatus</label>
+                        <input type="text" formControlName="maritalstatus" class="form-control" placeholder="enter Marital Status"  [ngClass]="{ 'is-invalid': submitted && f.maritalstatus.errors }" #maritalstatus />
+                        <div *ngIf="submitted && f.maritalstatus.errors" class="invalid-feedback">
+                            <div *ngIf="f.maritalstatus.errors.required">Marital Status is required</div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>No of dependents</label>
+                        <input type="text" formControlName="dependents" class="form-control" placeholder="no of dependents"  [ngClass]="{ 'is-invalid': submitted && f.dependents.errors }" #dependents />
+                        <div *ngIf="submitted && f.dependents.errors" class="invalid-feedback">
+                            <div *ngIf="f.dependents.errors.required">Number of dependents is required</div>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" #email />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <input type="text" formControlName="country" class="form-control" placeholder="enter country"  [ngClass]="{ 'is-invalid': submitted && f.country.errors }" #country />
+                        <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                            <div *ngIf="f.country.errors.required">Country is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" formControlName="city" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.city.errors }" #city />
+                        <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="text" formControlName="mobilenumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobilenumber.errors }" maxlength="10" #mobilenumber/>
+                        <div *ngIf="submitted && f.mobilenumber.errors" class="invalid-feedback">
+                            <div *ngIf="f.mobilenumber.errors.required">Mobile number is required</div>
+                            <div *ngIf="f.mobilenumber.errors.pattern || f.mobilenumber.errors.maxlength || f.mobilenumber.errors.minlength">Phone number must be at least 10 numbers</div>
+                        </div>
+                    </div>
+                    
+<div class="form-group">
+    <label>Pan Card Number</label>
+    <input type="text" formControlName="pannumber" class="form-control" placeholder="enter pan card number"  [ngClass]="{ 'is-invalid': submitted && f.pannumber.errors }" maxlength="10" #pannumber/>
+    <div *ngIf="submitted && f.pannumber.errors" class="invalid-feedback">
+        <div *ngIf="f.pannumber.errors.required">Pan Card Number is required</div>
+        
+    </div>
+</div>
+<div class="form-group">
+    <label>Aadhar Card Number</label>
+    <input type="text" formControlName="aadharnumber" class="form-control" placeholder="enter Aadhar card number"  [ngClass]="{ 'is-invalid': submitted && f.aadharnumber.errors } "maxlength="12" #aadharnumber />
+    <div *ngIf="submitted && f.aadharnumber.errors" class="invalid-feedback">
+        <div *ngIf="f.aadharnumber.errors.required">Aadhar Card Number is required</div>
+        
+    </div>
+</div>
+<div class="form-group">
+    <label>Income</label>
+    <input type="text" formControlName="income" class="form-control" placeholder="enter income"  [ngClass]="{ 'is-invalid': submitted && f.income.errors }" #income/>
+    <div *ngIf="submitted && f.income.errors" class="invalid-feedback">
+        <div *ngIf="f.income.errors.required">Income is required</div>
+        
+    </div>
+</div>
+<div class="form-group">
+    <label>Card Type</label>
+    <input type="text" formControlName="cardtype" class="form-control" placeholder="enter Card Type"  [ngClass]="{ 'is-invalid': submitted && f.income.errors }" #cardtype/>
+    <div *ngIf="submitted && f.cardtype.errors" class="invalid-feedback">
+        <div *ngIf="f.cardtype.errors.required">Card Type is required</div>
+        
+    </div>
+</div>
+                    
+                    <div class="form-group">
+                        <button class="btn btn-primary" (click)="idchange()">SUBMIT</button>
+                    </div>
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+

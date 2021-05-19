@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a routerLink="/customerlogin" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGIN</a>
+    <img src="data:image/png;base64,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" class="w3-round" alt="Random Name" style="width:5%">
+    
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/la.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Los Angeles</h3>
+      <p><b>We had the best time playing at Venice Beach!</b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/ny.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>New York</h3>
+      <p><b>The atmosphere in New York is lorem ipsum.</b></p>    
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="/w3images/chicago.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Chicago</h3>
+      <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
+    </div>
+  </div>
+
+  <!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">METROPOLIS</h2><br>
+    
+    <p class="w3-justify">In 1955 METROPOLIS was formed as an initiative of the World Bank. In the 1990s, METROPOLIS transformed its business from a financial institution limited to development projects to a diversified financial services group. Ever progressing with the times, METROPOLIS addressed a need to upgrade its corporate structure to that of universal banking.
+
+        The merger of METROPOLIS with METROPOLIS bank seemed like a natural step in line with its newly adopted universal outlook. This would enhance value for METROPOLIS shareholders with low-cost deposits, increased fee-based income, participation in the payment system and transaction banking services. It would also greatly benefit METROPOLIS Bank shareholders through a large capital base and scale of operations, access to corporate relationships built over five decades, new business segments and more.
+        
+        <br>
+        
+        <br><b>The Success Journey</b>
+        <br>
+        <br>
+        
+
+        In 1994, METROPOLIS Bank was promoted, by METROPOLIS Limited, the Indian Financial Institution.<br><br>
+        In fiscal 1998, through a public offering of shares in India, METROPOLIS’s shareholding in METROPOLIS Bank was reduced to 46%.<br><br>
+        In 1999, METROPOLIS become the first Indian company and the first bank or financial institution from non-Japan Asia to be listed on the NYSE.<br><br>
+        2000 saw an equity offering in the form of ADRs listed on the NYSE.<br><br>
+        In fiscal 2001, METROPOLIS Bank acquired Bank of Madhura, in an all-stock amalgamation.<br><br>
+       
+        </p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>SALES MANAGEMENT PROGRAMME</p>
+        <img src="https://www.icicicareers.com/admin/sections/images/Sales.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Probationary Officer Programme</p>
+        <img src="https://www.icicicareers.com/admin/sections/images/PO.png" class="w3-round w3-margin-bottom" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>ICICI Business Leadership Programme</p>
+        <img src="https://www.icicicareers.com/admin/sections/images/NISM.png" class="w3-round" alt="Random Name" style="width:60%">
+      </div>
+    </div>
+  </div>
+
+  
+ 
+
+ 
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+</body>
+</html>
+
+
+
+
